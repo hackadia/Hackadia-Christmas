@@ -1,0 +1,31 @@
+<!--==================== about ====================-->
+      <section class="about">
+
+         <div class="about__container container">
+            <img src="assets/img/santa.png" alt="image" class="about__img">
+         
+            <div class="about__data">
+               <div>
+                  <h1 class="about__title" id="title-data">Yeni Yılda
+                     <div class="about__number" id="number-data">3</div>
+                     <div class="about__text" id="text-data">Yeni</div>
+                     Hackadia Projesi
+                  </h1>
+   
+                  <h1 class="about__title" id="msg-christmas"></h1>
+               </div>
+   
+               <p class="about__description">
+                  Kullaanıcılarımızla Buluşmaya Hazırlanıyor
+               </p>
+   
+               <a href="#" class="button">Projeleri Gör</a>
+   
+            </div>
+
+            <img src="assets/img/bell.png" alt="" class="about__bell">
+         <img src="assets/img/star.png" alt="" class="about__star">
+
+         <div class="about__blob"></div>
+         </div>
+      </section>
