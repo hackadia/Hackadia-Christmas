@@ -2,133 +2,203 @@
 <html lang="en">
 
 <head>
-   <meta charset="UTF-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-   <!--=============== FAVICON ===============-->
-   <link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon">
+    <!--=============== FAVICON ===============-->
+    <link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon">
 
-   <!--=============== REMIXICONS ===============-->
-   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.6.0/remixicon.css">
+    <!--=============== REMIXICONS ===============-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.6.0/remixicon.css">
 
-   <!--=============== CSS ===============-->
-   <link rel="stylesheet" href="assets/css/styles.css">
+    <!--=============== CSS ===============-->
+    <link rel="stylesheet" href="assets/css/styles.css">
 
-   <title>Hackadia</title>
+    <title>Hackadia</title>
 </head>
 
 <body>
-   <!--==================== HEADER ====================-->
-   <header class="header" id="header">
-      <nav class="nav container">
 
-         <a href="" class="nav__logo">
+<!--==================== POP UP ====================-->
+<div class="popup-overlay" id="popup">
+
+    <div class="popup-content">
+
+        <h2 class="popup-title">Thunar Kapatılıyor!</h2>
+
+        <p class="popup-desc">En uzun soluklu projemiz olan Discord bekçi botu Thunar, 2 yıllık geliştirme sürecinin ardından kullanıcılara
+            veda ediyor. Uzun süreli onay bekleyişinin ardından beklemekten sıkıldık. Thunar'ın kullanıcı kitlesinin de
+            kaybolduğunun farkına vardık. <br><br> Artık Thunar'ı geliştirmek vazgeçip daha geleceğe yönelik projelerimize
+            odaklanmaya kara verdik. Thunar açık kaynak kodlu bir bottur. Eğer sizler bu projenin devam etmesini
+            istiyor, ya da kedni botlarınızı geliştirmek istiyorsanız <a
+                    href="https://github.com/hackadia/ThunarDiscordBot">buradan</a> bir çatal oluştrabilirsiniz.
+            Bugüne kadar Thunar'ı destekleyen herkese teşekkür ederiz</p>
+
+        <a onclick="closePopup()" class="button button__dark">Kapat</a>
+
+    </div>
+
+</div>
+
+<script src="assets/js/pop-up.js"></script>
+
+<!--==================== HEADER ====================-->
+<header class="header" id="header">
+
+    <nav class="nav container">
+
+        <a href="" class="nav__logo">
             <img src="assets/img/hackadia.png" alt="">
-         </a>
+        </a>
 
-         <div class="nav__menu" id="nav-menu">
+        <div class="nav__menu" id="nav-menu">
+
             <ul class="nav__list">
-               <li class="nav__item">
-                  <a href="" class="nav__link active-link">
-                     <span>01</span>Ana Sayfa
-                  </a>
-               </li>
-               <li class="nav__item">
-                  <a href="" class="nav__link">
-                     <span>02</span>Hakkımızda
-                  </a>
-               </li>
-               <li class="nav__item">
-                  <a href="" class="nav__link">
-                     <span>03</span>Hedef
-                  </a>
-               </li>
-               <li class="nav__item">
-                  <a href="" class="nav__link">
-                     <span>04</span>Projeler
-                  </a>
-               </li>
+
+                <li class="nav__item">
+                    <a href="#home" class="nav__link">
+                        <span>01</span>Ana Sayfa
+                    </a>
+                </li>
+
+                <li class="nav__item">
+                    <a href="#about" class="nav__link">
+                        <span>02</span>Hakkımızda
+                    </a>
+                </li>
+
+                <li class="nav__item">
+                    <a href="#target" class="nav__link">
+                        <span>03</span>Hedef
+                    </a>
+                </li>
+
+                <li class="nav__item">
+                    <a href="#projects" class="nav__link">
+                        <span>04</span>Projeler
+                    </a>
+                </li>
+
             </ul>
 
             <div class="nav__buttons">
 
-               <div class="nav__notifications">
+                <div class="nav__notifications">
 
-                  <img src="assets/img/bell.png" alt="" class="nav__bell">
-                  <div class="nav__circle">2</div>
+                    <img src="assets/img/bell.png" alt="" class="nav__bell">
+                    <div class="nav__circle">2</div>
 
-               </div>
+                </div>
 
-               <a href="" class="button button__dark">Github</a>
+                <a href="" class="button button__dark">Github</a>
 
             </div>
 
             <div class="nav__close" id="nav-close">
 
-               <i class="ri-close-line"></i>
+                <i class="ri-close-line"></i>
 
             </div>
 
-         </div>
+        </div>
 
-         <div class="nav__toggle" id="nav-toggle">
+        <div class="nav__toggle" id="nav-toggle">
             <i class="ri-apps-2-line"></i>
-         </div>
+        </div>
 
-      </nav>
-   </header>
+    </nav>
+</header>
 
-   <!--==================== MAIN ====================-->
-   <main class="main">
-      <!--==================== HOME ====================-->
-      <section class="home">
+<!--==================== MAIN ====================-->
+<main class="main">
+    <!--==================== HOME ====================-->
+    <section class="home" id="home">
 
-         <div class="home__container container">
+        <div class="home__container container">
             <img src="assets/img/santa.png" alt="image" class="home__img">
-         
+
             <div class="home__data">
-               <div>
-                  <h1 class="home__title" id="title-data">Yeni Yılda
-                     <div class="home__number" id="number-data">3</div>
-                     <div class="home__text" id="text-data">Yeni</div>
-                     Hackadia Projesi
-                  </h1>
-   
-                  <h1 class="home__title" id="msg-christmas"></h1>
-               </div>
-   
-               <p class="home__description">
-                  Kullaanıcılarımızla Buluşmaya Hazırlanıyor
-               </p>
-   
-               <a href="#" class="button">Projeleri Gör</a>
-   
+                <div>
+                    <h1 class="home__title" id="title-data">Yeni Yılda
+                        <div class="home__number" id="number-data">3</div>
+                        <div class="home__text" id="text-data">Yeni</div>
+                        Hackadia Projesi
+                    </h1>
+
+                    <h1 class="home__title" id="msg-christmas"></h1>
+                </div>
+
+                <p class="home__description">
+                    Kullanıcılarımızla Buluşmaya Hazırlanıyor
+                </p>
+
+                <a href="#projects" class="button">Projeleri Gör</a>
+
             </div>
 
             <img src="assets/img/bell.png" alt="" class="home__bell">
-         <img src="assets/img/star.png" alt="" class="home__star">
+            <img src="assets/img/star.png" alt="" class="home__star">
 
-         <div class="home__blob"></div>
-         </div>
-      </section>
+            <div class="home__blob"></div>
+        </div>
+    </section>
 
-      <section class="about">
+    <section class="about" id="about">
 
-      </section>
+        <div class="home__container container">
+            <img src="assets/img/hackadia.png" alt="image" class="home__img">
 
-      <section class="target">
+            <div class="home__data">
+                <div>
+                    <h1 class="home__title" id="title-data">Hackadia
+                        <!-- <div class="home__number" id="number-data">3</div>
+                     <div class="home__text" id="text-data">Yeni</div>
+                     Hackadia Projesi -->
+                    </h1>
 
-      </section>
+                    Siber Güvenliğin Öncüleri
 
-      <section class="projects">
+                    <h1 class="home__title" id="msg-christmas"></h1>
+                </div>
 
-      </section>
+                <p class="home__description">
+                    Hackadia, modern tasarım (GUI veya TUI) ve siber güvenliği birleştiren bir oluşumdur.
+                    Kullanıcılarımıza en son çıkan tasarımlarla en yeni çıkan güvenlik yamalarını birleştirip
+                    programlarımızı sunmayı hedefliyoruz. Bu güne kadar 2 proje ile kullanıcılarımızı buluşturduk. Artık
+                    2024 yılında yeni projelerle karşınıza çıkıyoruz
+                </p>
 
-   <!--=============== SNOW JS ===============-->
-   <script src="https://app.embed.im/snow.js" defer></script>
+                <a href="#projects" class="button">Projeleri Gör</a>
 
-   <!--=============== MAIN JS ===============-->
-   <script src="assets/js/main.js"></script>
+            </div>
+        </div>
+    </section>
+
+    <section class="target" id="target">
+
+        <div class="home__container container">
+
+
+
+        </div>
+
+    </section>
+
+    <section class="projects" id="projects">
+
+        <div class="home__container container">
+
+
+
+        </div>
+
+    </section>
+
+    <!--=============== SNOW JS ===============-->
+    <script src="https://app.embed.im/snow.js" defer></script>
+
+    <!--=============== MAIN JS ===============-->
+    <script src="assets/js/main.js"></script>
 </body>
 
 </html>
